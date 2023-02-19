@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d7431438a4.js" crossorigin="anonymous"></script>
+    <title>Shoeniverse.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px 20px;
+            /* border: 2px solid; */
+        }
+
+        .navbar img {
+            height: 70px;
+        }
+
+        .navbar .navlink a {
+            font-size: 20px;
+            margin: 0 10px;
+            color: black;
+        }
+        .navbar .navlink a:hover{
+            border-bottom: 2px solid ;
+        }
+
+        @media only screen and (max-width:500px) {
+            .navbar {
+                padding: 2px 5px;
+                /* border: 2px solid; */
+            }
+
+            .navbar img {
+                height: 50px;
+            }
+
+            .navbar .navlink a {
+                font-size: 20px;
+                margin: 0 5px;
+            }
+        }
+
+        @media only screen and (max-width:400px) {
+            .navbar .navlink a {
+                font-size: 18px;
+                margin: 0 5px;
+            }
+        }
+
+        .banner img {
+            /* height: 10%; */
+            width: 100%;
+            /* height: 300px; */
+        }
+
+.service{
+    margin: 0;
+}
+        .header {
+            text-align: center;
+            padding: 32px;
+
+        }
+        .header h1{
+            font-size: 35px;
+            margin-bottom: 8px;
+            color: rgb(6, 6, 82);
+            /* border: 2px solid; */
+        }
+        .header p{
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+            width: 100%;
+            height: 500px;
+            overflow: scroll;
+            margin-top: 15px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+            /* max-width: 25%; */
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+            .row {
+                height: 350px;
+            }
+            .service h1{
+                margin-top: -17px;
+            }
+            .service p{
+            font-size: 22px;
+            margin-bottom: -30px;
+        }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            /* .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%; 
+            }  */
+            /* .row {
+                height: 280px;
+            } */
+            .service p{
+            font-size: 18px;
+            /* margin-bottom: 12px; */
+        }
+         }
+         #about{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+         }
+         #about h2{
+            font-size: 35px;
+            color: rgb(10, 10, 60);
+            margin-bottom: 10px;
+            margin-top: 10px;
+         }
+         #about p{
+            font-size: 26px;
+            width: 80%;
+         }
+         @media screen and (max-width: 800px) {
+           
+           #about p{
+           font-size: 23px;
+           margin-bottom: 12px;
+       }
+        }
+         @media screen and (max-width: 600px) {
+           
+            #about p{
+            font-size: 18px;
+            margin-bottom: -15px;
+        }
+         }
+
+        .contact {
+            padding-top: 50px;
+
+        }
+
+        .contact h3 {
+            text-align: center;
+            font-size: 35px;
+            color: rgb(1, 1, 86);
+            margin-bottom: 30PX;
+            /* border: 2px solid; */
+            margin-top: -40px;
+        }
+
+        .contact div {
+            display: flex;
+            justify-content: center;
+            padding: 0 5px;
+            /* grid-template-columns: auto auto; */
+            /* flex-direction: column-reverse; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-direction: row; */
+        }
+
+        .contact img {
+            max-width: 550px;
+            border-radius: 5px;
+            /* margin-bottom: 20px; */
+        }
+
+        .contact form {
+            /* border: 2px solid; */
+            width: 550px;
+            margin-left: 30px;
+            /* padding-top: 5px; */
+
+        }
+
+        .contact form label {
+            font-size: 20px;
+            font-weight: 600;
+            /* padding-bottom: 10px; */
+            display: table;
+            margin-bottom: -10px;
+
+
+        }
+
+        .contact form textarea {
+            width: 98%;
+            font-size: 18px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            color: rgb(61, 61, 61);
+            background-color: rgb(125, 125, 246);
+        }
+
+        .contact form input {
+            height: 35px;
+            width: 98%;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: rgb(195, 195, 247);
+            color: rgb(240, 234, 234);
+        }
+
+        .contact #submit {
+            background-color: aqua;
+            font-size: 25px;
+            height: 40px;
+            font-weight: 600;
+            /* margin-top: 30px; */
+            color: black;
+            border-radius: 5px;
+            margin-bottom: -10px;
+        }
+        .contact #submit:hover{
+            background-color: rgb(5, 139, 188);
+        }
+
+        @media only screen and (max-width:1050px) {
+            .contact img {
+                width: 400px;
+            }
+        }
+
+        @media only screen and (max-width:790px) {
+            .contact div {
+                display: flex;
+                justify-content: center;
+                padding: 0 5px;
+                /* grid-template-columns: auto auto; */
+                flex-direction: column-reverse;
+                /* flex-wrap: wrap-reverse; */
+                /* /* flex-direction: r */
+            }
+
+            .contact form {
+                width: 550px;
+                padding: 0px;
+                margin: 0px;
+                /* border: 2px solid; */
+            }
+
+            /* .contact form input {
+                background-color: red;
+            } */
+
+            .contact {
+                display: flex;
+                flex-direction: column;
+                /* justify-content: center; */
+                align-items: center;
+            }
+
+            .contact img {
+                /* display: none; */
+                /* margin: 0; */
+                margin-top: 30px;
+                width: 100%;
+                height: 300px;
+                margin-left: px;
+            }
+        }
+
+        @media only screen and (max-width:580px) {
+            .contact img {
+                height: 200px;
+                padding: 0;
+                width: 100%;
+
+            }
+
+            .contact form {
+                max-width: 350px;
+            }
+
+            .contact div {
+                padding: 0;
+            }
+        }
+
+        footer {
+            background-color: rgb(25, 25, 25);
+            text-align: center;
+            color: white;
+            height: 100px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer span a {
+            color: white;
+            font-size: 22px;
+            margin: 0 15px;
+        }
+
+        footer span a:hover {
+            color: rgb(65, 119, 254);
+        }
+
+        footer p {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        .text-blk {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            line-height: 25px;
+        }
+
+        .responsive-container-block {
+            min-height: 75px;
+            height: fit-content;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            justify-content: flex-start;
+        }
+
+        .container-block {
+            min-height: 75px;
+            height: fit-content;
+            width: 100%;
+            padding-top: 10px;
+            /* padding-right: 10px; */
+            padding-bottom: 10px;
+            /* padding-left: 10px; */
+            display: block;
+            /* border: 2px solid; */
+        }
+
+        .responsive-cell-block {
+            min-height: 75px;
+        }
+
+        .container {
+            max-width: 1380px;
+            margin-top: 40px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            padding-top: 0px;
+            /* padding-right: 30px; */
+            padding-bottom: 0px;
+            /* padding-left: 30px; */
+            /* border: 2px solid; */
+        }
+
+        .team-head-text {
+            font-size: 38px;
+            line-height: 50px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 15px;
+            margin-left: 0px;
+            color: rgb(1, 1, 86);
+        }
+
+        .name {
+            font-size: 18px;
+            margin-top: 11px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            font-weight: 700;
+        }
+
+        .position {
+            margin-top: 5px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            /* border: 2px solid; */
+        }
+
+        .team-card-container {
+            width: 263px;
+            margin-top: 0px;
+            margin-right: 10px;
+            margin-bottom: 30px;
+            margin-left: 10px;
+            /* border: 2px solid; */
+        }
+
+        .teamcard-container {
+            justify-content: space-evenly;
+            /* border: 2px solid; */
+            width: 90%;
+        }
+
+        .team-img-wrapper {
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+            /* border: 2px solid; */
+        }
+
+        .team-img {
+            max-width: 100%;
+        }
+
+        @media (max-width: 500px) {
+            .team-card-container {
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 30px;
+                margin-left: 0px;
+                width: 100%;
+            }
+
+            .team-img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="shoelogo.jpg" alt="">
+            <div class="navlink">
+                <a href="#">Home</a>
+                <a href="#service">Service</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <img class="mySlides" src="img/shoe-banner.jpeg">
+            <img class="mySlides" src="img/shoe-banner2.jpg">
+            <img class="mySlides" src="img/shoe-banner3.jpg">
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 2000);
+                }
+            </script>
+        </section>
+
+        <section class="service" id="service">
+            <div class="header">
+                <h1>Our Service</h1>
+                <p>Shoeniverse is here to make your daily regular shoes the way you want . We provide you superior quality and more brandable shoes and they are entirely yours . You can get your customized shoes from our store or you can also give your own shoes to customize.</p>
+              </div>
+            <!-- Photo Grid -->
+
+            <div class="row">
+                <div class="column">
+                    <img src="img/product1.jpg" style="width:100%">
+                    <img src="img/product2.jpg" style="width:100%">
+                    <img src="img/product3.jpg" style="width:100%">
+                    <img src="img/product4.jpg" style="width:100%">
+                    <img src="img/product5.jpg" style="width:100%">
+                    <img src="img/product5.jpg" style="width:100%">
+                    <!-- <img src="img/product1.jpg" style="width:100%"> -->
+                </div>
+                <div class="column">
+                    <img src="img/product2.jpg" style="width:100%">
+                    <img src="img/product4.jpg" style="width:100%">
+                    <img src="img/product5.jpg" style="width:100%">
+                    <img src="img/product5.jpg" style="width:100%">
+                    <img src="img/product3.jpg" style="width:100%">
+                    <img src="img/product2.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="img/product1.jpg" style="width:100%">
+                    <img src="img/product5.jpg" style="width:100%">
+                    <img src="img/product3.jpg" style="width:100%">
+                    <img src="img/product1.jpg" style="width:100%">
+                    <img src="img/product4.jpg" style="width:100%">
+                    <img src="img/product5.jpg" style="width:100%">
+                    <!-- <img src="img/product2.jpg" style="width:100%"> -->
+                </div>
+                <div class="column">
+                    <img src="img/product1.jpg" style="width:100%">
+                    <img src="img/product5.jpg" style="width:100%">
+                    <img src="img/product4.jpg" style="width:100%">
+                    <img src="img/product5.jpg" style="width:100%">
+                    <img src="img/product3.jpg" style="width:100%">
+                    <img src="img/product1.jpg" style="width:100%">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="about">
+<h2>About us</h2>
+<p>Founder and co-founder started this company in 2010 because they saw that a lot of people wanted their own customised shoes but there were no such companies so we came up with this idea. From past 4 years we have been daily customising 50k + shoes across the country.we also have our branches in different states of our country including Maharashtra, gujrat, west bengal etc.Our mission and aim is to spread our work worldwide in next 2 years</p>
+        </section>
+
+        <section class="team" id="team">
+            <div class="container-block container">
+                <p class="text-blk team-head-text">
+                    Our Team
+                </p>
+                <div class="responsive-container-block teamcard-container">
+                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                        <div class="team-card">
+                            <div class="team-img-wrapper">
+                                <img class="team-img" src="img/memeber0.jpeg">
+                            </div>
+                            <div class="team-card-content">
+                                <p class="text-blk name">
+                                    Shruti salve
+                                </p>
+                                <p class="text-blk position">
+                                    CEO <br>
+                                    Born and raised in Mumbai studied in m.l.dahanukar college she found this company in 2010 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                        <div class="team-card">
+                            <div class="team-img-wrapper">
+                                <img class="team-img" src="img/memeber4.jpeg">
+                            </div>
+                            <div class="team-card-content">
+                                <p class="text-blk name">
+                                    Poorva Panchal
+                                </p>
+                                <p class="text-blk position">
+                                    CO-FOUNDER <br>
+                                    Studied in m.l.dahanukar college she is from khar,Mumbai co founder of the company
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                        <div class="team-card">
+                            <div class="team-img-wrapper">
+                                <img class="team-img" src="img/memeber2.jpeg">
+                            </div>
+                            <div class="team-card-content">
+                                <p class="text-blk name">
+                                    Sandhya Ptail
+                                </p>
+                                <p class="text-blk position">
+                                    ACCOUNTANT <br>
+                                    Student of m.l.dahanukar college from mumbai she has an 5 years experience as an accountant
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                        <div class="team-card">
+                            <div class="team-img-wrapper">
+                                <img class="team-img" src="img/memeber3.jpeg">
+                            </div>
+                            <div class="team-card-content">
+                                <p class="text-blk name">
+                                    Arya Tondwalkar
+                                </p>
+                                <p class="text-blk position">
+                                    MARKETING HEAD <br>
+                                    She has an 5+ years experience in her field Studied at St. Xavier  college from Mumbai 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                        <div class="team-card">
+                            <div class="team-img-wrapper">
+                                <img class="team-img" src="img/member1.jpg">
+                            </div>
+                            <div class="team-card-content">
+                                <p class="text-blk name">
+                                    Vrunda Virkyde
+                                </p>
+                                <p class="text-blk position">
+                                    DESIGN HEAD <br>
+                                    Studied at St. Xavier college fron Mumbai, know for her excellent design skills 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                        <div class="team-card">
+                            <div class="team-img-wrapper">
+                                <img class="team-img" src="img/memeber5.jpeg">
+                            </div>
+                            <div class="team-card-content">
+                                <p class="text-blk name">
+                                    Dipti Bhovad
+                                </p>
+                                <p class="text-blk position">
+                                    OPERATION HEAD <br>
+                                    Studied in m.l.dahanukar college she has an excellent experience of 5 years in operation head
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h3>BOOK YOUR OWN <br> CUSTOMIZED SHOES</h3>
+            <div>
+                <div>
+                    <img src="img/canvasshoe.jpg" alt="">
+                </div>
+                <form action="">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="email">Email Id</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="Phnno">Phone No</label><br>
+                    <input type="text" id="Phnno" name="Phnno"><br>
+                    <label for="msg">Message</label><br>
+                    <textarea name="msg" id="msg" cols="30" rows="5"></textarea><br>
+                    <input id="submit" type="button" value="Submit">
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <span>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </span>
+        <p>Made with ❤️</p>
+    </footer>
+</body>
+
+</html>
